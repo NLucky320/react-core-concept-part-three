@@ -2,11 +2,20 @@
 
 import HookForm from './components/HookForm/HookForm'
 import RefForm from './components/RefForm/RefForm'
+import ReusableForm from './components/ReusableForm/ReusableForm'
 import SimpleForm from './components/SimpleForm/SimpleForm'
 import StatefulForm from './components/StatefulForm/StatefulForm'
 
 function App() {
 
+
+const handleSignUpSubmit = data => {
+console.log(data)
+}
+  
+  const handleUpdateProfile = data => {
+console.log(data)
+  }
 
   return (
     <>
@@ -14,7 +23,9 @@ function App() {
         {/* <SimpleForm></SimpleForm> */}
         {/* <StatefulForm></StatefulForm> */}
         {/* <RefForm></RefForm> */}
-        <HookForm></HookForm>
+        {/* <HookForm></HookForm> */}
+        <ReusableForm formTitle={'Sign Up'} handleSubmit={handleSignUpSubmit}></ReusableForm>
+        <ReusableForm formTitle={'Profile Update'} handleSubmit={handleUpdateProfile} submitButtonText='Update'></ReusableForm>
  </div>
     </>
   )
