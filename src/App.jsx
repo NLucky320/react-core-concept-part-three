@@ -24,8 +24,19 @@ console.log(data)
         {/* <StatefulForm></StatefulForm> */}
         {/* <RefForm></RefForm> */}
         {/* <HookForm></HookForm> */}
-        <ReusableForm formTitle={'Sign Up'} handleSubmit={handleSignUpSubmit}></ReusableForm>
-        <ReusableForm formTitle={'Profile Update'} handleSubmit={handleUpdateProfile} submitButtonText='Update'></ReusableForm>
+        <ReusableForm formTitle={'Sign Up'} handleSubmit={handleSignUpSubmit}>
+          <div>
+            <h2>Sign Up</h2>
+            <p>Please sign up right now</p>
+          </div>
+        </ReusableForm>
+        <ReusableForm formTitle={'Profile Update'} handleSubmit={handleUpdateProfile} submitButtonText='Update'>
+             <div>
+            <h2>Update Profile
+            </h2>
+            <p>Please Keep Updated your Profile</p>
+          </div>
+        </ReusableForm>
  </div>
     </>
   )
